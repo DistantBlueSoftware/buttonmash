@@ -1,0 +1,11 @@
+{
+  "name": "buttonmash-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "distant blue software",
+  "license": "MIT",
+  "dependencies": {
+    "shortid": "^2.2.14",
+    "socket.io": "^2.2.0"
+  }
+}
