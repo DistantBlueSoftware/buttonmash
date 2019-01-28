@@ -54,7 +54,9 @@ io.on('connection', function (client) {
   })
 });
 
-server.listen(8080, function (err) {
+const PORT = process.env.PORT || 8080;
+
+server.listen(PORT, function (err) {
   if (err) throw err;
-  console.log('listening on port 8080');
+  console.log(`listening on port ${PORT}`);
 })
