@@ -6,6 +6,7 @@ const searchingPlayers = [];
 
 io.on('connection', function (client) {
   console.log(`${client.id} connected`)
+  io.to(client.clientID).emit('player', connectedPlayers.map(p => p.playerID));
   
   client.on('addPlayer', (id, cb) => {
     if (!~connectedPlayers.map(p => p.playerID).indexOf(id)) connectedPlayers.push({clientID: client.id, playerID: id});
